@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Service Details - Cost Prediction(CAC)</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+   <link href="../static/assets/img/letter-c3.png" rel="icon">
+   <link href="../static/assets/img/letter-c3.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="../static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="../static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="../static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="../static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Updated: Jun 14 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body class="service-details-page">
+
+  <header id="header" class="header d-flex align-items-center position-relative">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-lg-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Cost-Predict</h1>
+        <span>.</span>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/">Home<br></a></li>
+          <!--<li><a href="{{url_for('homepage')}}">About</a></li>-->
+          <li><a href="#">Services</a></li>
+         <!-- <li><a href="index.html#team">Team</a></li>-->
+          <!--<li><a href="index.html#contact">Contact</a></li>-->
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+      
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="heading">
+        <div class="container">
+          <div class="row d-flex justify-content-center text-center">
+            <div class="col-lg-8">
+              <h1>Services</h1>
+              <p class="mb-0">Here we are are going to calculate and predict the cost required to acquire a customer.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav class="breadcrumbs">
+        <div class="container">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Service Details</li>
+          </ol>
+        </div>
+      </nav>
+    </div><!-- End Page Title -->
+    <section class="inner-page">
+      <div class="container">
+        <h1 class="mt-5 text-center">Cost Prediction of Acquring Customers</h1>
+        <p class="text-center">Enter required values to predict the cost:</p>
+        <form action="{{url_for('predictionpage')}}" method="POST">
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="store_sqft">Store sqft</label>
+              <input type="number" class="form-control" id="store_sqft" name="store_sqft" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="grocery_sqft">Grocery sqft</label>
+              <input type="number" class="form-control" id="grocery_sqft" name="grocery_sqft" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="brand_name">Brand Name</label>
+              <input type="text" class="form-control" id="brand_name" name="brand_name" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="food_category">Food Category</label>
+              <input type="text" class="form-control" id="food_category" name="food_category" required>
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group col-md-4">
+              <label for="promotion_name">Promotion name</label>
+              <input type="text" class="form-control" id="promotion_name" name="promotion_name" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="units_per_case">Units per Case</label>
+              <input type="number" class="form-control" id="units_per_case" name="units_per_case" required>
+            </div>
+          </div>
+          <div class="form-row">  
+            <div class="form-group col-md-4">
+              <label for="net_weight">Net Weight </label>
+              <input type="number" class="form-control" id="net_weight" name="net_weight" required>
+            </div>
+            <div class="form-group col-md-4">
+              <label for="store_city">Store City</label>
+              <input type="text" class="form-control" id="store_city" name="store_city" required>
+            </div>
+          </div>
+          <div>
+          </div>
+          <br>
+          <form action="{{url_for('predictionpage')}}">
+             <button type="submit" class="btn btn-warning" method="POST">
+                Predict
+             </button>
+           </form>
+        </form>
+        
+      </div>
+       
+    
+    </section>
+
+  </main>
+
+  <footer id="footer" class="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-4 col-md-6 footer-about">
+            <a href="index.html" class="logo d-flex align-items-center">
+              <span class="sitename">Cost-Predict</span>
+            </a>
+            <div class="footer-contact pt-3">
+              <p>Vaagdevi Engineering College</p>
+              <p>Bollikunta, Warangal.</p>
+              <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
+              <p><strong>Email:</strong> <span>info@example.com</span></p>
+            </div>
+            <div class="social-links d-flex mt-4">
+              <a href=""><i class="bi bi-github"></i></a>
+              
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#home"> Home</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#team"> About us</a></li>
+              <li><i class="bi bi-chevron-right"></i> <a href="index.html#services"> Services</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bi bi-chevron-right"></i> <a href="service-details.html"> Cost Prediction</a></li>
+            </ul>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <div class="container text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Cost-Predict</strong> <span>All Rights Reserved</span></p>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you've purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-circle"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../static/assets/vendor/php-email-form/validate.js"></script>
+  <script src="../static/assets/vendor/aos/aos.js"></script>
+  <script src="../static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../static/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="../static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../static/assets/js/main.js"></script>
+
+</body>
+
+</html>
